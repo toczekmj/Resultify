@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resultify", "Resultify.csproj", "{11F0BC28-F719-4B15-A343-E33833EAF157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resultify.Tests", "Resultify.Tests\Resultify.Tests.csproj", "{65AEE7CE-AAD4-45AA-ACE8-542CD0C1418E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11F0BC28-F719-4B15-A343-E33833EAF157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F0BC28-F719-4B15-A343-E33833EAF157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F0BC28-F719-4B15-A343-E33833EAF157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F0BC28-F719-4B15-A343-E33833EAF157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65AEE7CE-AAD4-45AA-ACE8-542CD0C1418E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65AEE7CE-AAD4-45AA-ACE8-542CD0C1418E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65AEE7CE-AAD4-45AA-ACE8-542CD0C1418E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65AEE7CE-AAD4-45AA-ACE8-542CD0C1418E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

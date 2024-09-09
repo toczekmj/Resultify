@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Resultify.Tests\**"/>
+        <Compile Remove="Resultify.Fluent\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Resultify.Tests\**"/>
+        <None Remove="Resultify.Fluent\**"/>
+    </ItemGroup>
+
+</Project>
