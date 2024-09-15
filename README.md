@@ -31,7 +31,7 @@ Map responses to different types or values using the MapResponse method:
 ```csharp
 var handler = new ResultifyHandler<string>("Test Value", ResponseCategory.Success, "Success message", HttpStatusCode.OK);
 var result = handler.MapResponse(value => value.Length);
-Console.WriteLine(result.Value); // Output: 10
+Console.WriteLine(result.Value); // Output: Test Value
 ```
 
 
@@ -86,7 +86,7 @@ public async Task<int> Consumer()
         Console.WriteLine("At least one response is an error");
     }
     
-    return 
+    return Resultify.Success(result, HttpStatusCode.Ok);
 }
 
 ```
