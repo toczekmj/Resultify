@@ -39,9 +39,54 @@ Console.WriteLine(result.Value); // Output: 10
 Handle different categories of responses:
     
 ```csharp
-var errorHandler = new ResultifyHandler<string>(null, ResponseCategory.ClientError, "Client error occurred", HttpStatusCode.BadRequest);
-if (errorHandler.Category == ResponseCategory.ClientError)
+// Sample method that returns a ResultifyHandler
+public async Task<ResultifyHandler<int?>> Producer()
 {
-    Console.WriteLine(errorHandler.Message); // Output: Client error occurred
+    // Some work is done here
+    int? result = await AnotherComputedValue();
+    
+    // Produce a response based on the result
+    if (result is null)
+    {
+        return Resultify.NotFound<int?>(HttpStatusCode.NotFound, "Value not found");
+    }
+    return Resultify.Success(i, HttpStatusCode.OK, "Optional message");
+    
 }
+
+// MapResponse method can be used to map the response to a different type
+public async Task<ResultifyHandler<ObjectDTO>> Producer2()
+{
+    // Some work is done here
+    DbObject? result = await AnotherComputedValue();
+    
+    return result.MapResponse(r => r.AsDTO());
+}
+
+// Sample method that consumes the ResultifyHandler
+public async Task<int> Consumer()
+{
+    var result = await Producer();
+    
+    // Handle the response based on the category
+    if (result.Category == ResponseCategory.Success)
+    {
+        Console.WriteLine(result.Value);
+    }
+    else
+    {
+        Console.WriteLine(result.Message);
+    }
+    
+    // Check multiple values 
+    var objectDto = await Producer2();
+    
+    if(Resultify.AnyFail(result, objectDto))
+    {
+        Console.WriteLine("At least one response is an error");
+    }
+    
+    return 
+}
+
 ```
