@@ -6,7 +6,6 @@ Resultify is a C# library designed to handle and map responses with various cate
 
 - **Response Handling**: Manage responses with different categories such as Success, Information, Redirection, ClientError, ServerError, and GenericError.
 - **Response Mapping**: Map responses to different types or values using custom mapping functions.
-- **Fluent Assertions**: Easily test your response handling and mapping logic with FluentAssertions.
 
 ## Installation
 
@@ -31,7 +30,7 @@ Map responses to different types or values using the MapResponse method:
 ```csharp
 var handler = new ResultifyHandler<string>("Test Value", ResponseCategory.Success, "Success message", HttpStatusCode.OK);
 var result = handler.MapResponse(value => value.Length);
-Console.WriteLine(result.Value); // Output: 10
+Console.WriteLine(result.Value); // Output: Test Value
 ```
 
 
@@ -86,7 +85,7 @@ public async Task<int> Consumer()
         Console.WriteLine("At least one response is an error");
     }
     
-    return 
+    return Resultify.Success(result, HttpStatusCode.Ok);
 }
 
 ```
