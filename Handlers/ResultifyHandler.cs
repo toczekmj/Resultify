@@ -11,5 +11,4 @@ public record ResultifyHandler<T>(
     T? Value,
     ResponseCategory ResponseCategory,
     string ErrorMessage,
-    HttpStatusCode? StatusCode)
-    : IResultifyHandler;
+    HttpStatusCode? StatusCode) : IResultifyHandler;

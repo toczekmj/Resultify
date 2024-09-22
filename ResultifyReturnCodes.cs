@@ -51,7 +51,7 @@ public static partial class Resultify
     {
         return new ResultifyHandler(ResponseCategory.Success, message ?? string.Empty, statusCode);
     }
-
+    
     public static ResultifyHandler Redirection(string? message, HttpStatusCode? statusCode)
     {
         return new ResultifyHandler(ResponseCategory.Redirection, message ?? string.Empty, statusCode);

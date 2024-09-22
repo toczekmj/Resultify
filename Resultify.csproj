@@ -1,13 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>1.0.5</Version>
+        <Version>1.0.6</Version>
         <Title>Resultify pattern</Title>
-        <Authors>Toczekmj</Authors>
+        <Authors>Michał Toczek (toczekmj)</Authors>
         <Description>This is a simple Result package for C# 12 and below.
 It provides ResultifyHandler&lt;T&gt; and variety of different return types with supports for http status codes. </Description>
         <Copyright>Michał Toczek</Copyright>
@@ -17,6 +16,8 @@ It provides ResultifyHandler&lt;T&gt; and variety of different return types with
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <SignAssembly>true</SignAssembly>
         <PackageIcon>resultify.png</PackageIcon>
+        <TargetFrameworks>net8.0;net6.0;net7.0</TargetFrameworks>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
     
     <ItemGroup>
@@ -29,7 +30,6 @@ It provides ResultifyHandler&lt;T&gt; and variety of different return types with
         <None Remove="Resultify.Fluent\**"/>
         <None Update="resultify.png">
           <Pack>True</Pack>
-          <PackagePath></PackagePath>
         </None>
     </ItemGroup>
     <ItemGroup>
@@ -39,6 +39,7 @@ It provides ResultifyHandler&lt;T&gt; and variety of different return types with
 
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="."/>
+        <None Include="resultify.png" Pack="true" PackagePath="."/>
     </ItemGroup>
 
 </Project>

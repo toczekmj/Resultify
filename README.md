@@ -49,7 +49,7 @@ public async Task<ResultifyHandler<int?>> Producer()
     {
         return Resultify.NotFound<int?>(HttpStatusCode.NotFound, "Value not found");
     }
-    return Resultify.Success(i, HttpStatusCode.OK, "Optional message");
+    return Resultify.Success(result, HttpStatusCode.OK, "Optional message");
     
 }
 
