@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>1.0.4</Version>
+        <Version>1.0.5</Version>
         <Title>Resultify pattern</Title>
         <Authors>Toczekmj</Authors>
         <Description>This is a simple Result package for C# 12 and below.
@@ -16,6 +16,7 @@ It provides ResultifyHandler&lt;T&gt; and variety of different return types with
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <SignAssembly>true</SignAssembly>
+        <PackageIcon>resultify.png</PackageIcon>
     </PropertyGroup>
     
     <ItemGroup>
@@ -26,6 +27,10 @@ It provides ResultifyHandler&lt;T&gt; and variety of different return types with
     <ItemGroup>
         <None Remove="Resultify.Tests\**"/>
         <None Remove="Resultify.Fluent\**"/>
+        <None Update="resultify.png">
+          <Pack>True</Pack>
+          <PackagePath></PackagePath>
+        </None>
     </ItemGroup>
     <ItemGroup>
         <Content Remove="Resultify.Tests\**"/>
