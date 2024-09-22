@@ -57,7 +57,7 @@ public async Task<ResultifyHandler<int?>> Producer()
 public async Task<ResultifyHandler<ObjectDTO>> Producer2()
 {
     // Some work is done here
-    DbObject? result = await AnotherComputedValue();
+    ResultifyHandler<DbObject?> result = await AnotherComputedValue();
     
     return result.MapResponse(r => r.AsDTO());
 }
